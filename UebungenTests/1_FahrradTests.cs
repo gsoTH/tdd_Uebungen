@@ -37,6 +37,33 @@ namespace UebungenTests
             Assert.AreEqual(sitze, f.Sitze);
         }
 
-        
+        [TestMethod]
+        public void ReifengroesseInZoll_GibtNurGroesstenReifenAus()
+        {
+            // Arrange
+            Reifen[] reifen = { new Reifen(20), new Reifen(26) };
+            Fahrrad f = new Fahrrad("schwarz", 3, reifen);
+
+            // Act
+            int groessterReifen = f.ReifengroesseInZoll;
+
+            // Assert
+            Assert.AreEqual(26, groessterReifen);
+        }
+
+        [TestMethod]
+        public void Farbe_KannVerändertWerden()
+        {
+            // Arrange
+            Fahrrad f = new Fahrrad("schwarz", 1, 3, 20);
+            string neueFarbe = "hellrosa";
+
+            // Act
+            f.Farbe = neueFarbe;
+
+            // Assert
+            Assert.AreEqual(neueFarbe, f.Farbe);
+        }
+
     }
 }

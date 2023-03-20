@@ -26,6 +26,20 @@ namespace Uebungen
             this.sitze = sitze;
         }
 
+        public Fahrrad(string farbe, int gaenge, Reifen[] reifen) : this(farbe, gaenge, 12)
+        {
+            int maxReifengroesse = 0;
+            for (int i = 0; i < reifen.Length; i++)
+            {
+                if( reifen[i].Zoll > maxReifengroesse)
+                {
+                    maxReifengroesse = reifen[i].Zoll;
+                }
+            }
+
+            this.reifengroesseInZoll = maxReifengroesse;
+        }
+
         public string Farbe
         {
             get { return farbe; }
