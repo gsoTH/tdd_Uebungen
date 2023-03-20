@@ -12,7 +12,12 @@ namespace Uebungen
 
         public Reifen(int zoll)
         {
-            this.zoll = zoll;
+            if (zoll < 12 || zoll > 29)
+            {
+                throw new ArgumentOutOfRangeException("Reifengröße ist außerhalb des gültigen Bereichs.");
+            } else {
+                this.zoll = zoll;
+            }
         }
 
         public int Zoll 
