@@ -65,5 +65,7 @@ namespace UebungenTests
             Assert.AreEqual(neueFarbe, f.Farbe);
         }
 
+        //TODO: Negativtests einbauen
+
     }
 }
