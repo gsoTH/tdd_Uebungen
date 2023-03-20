@@ -23,5 +23,20 @@ namespace UebungenTests
             Assert.AreEqual(reifengroesseInZoll, f.ReifengroesseInZoll);
             Assert.AreEqual(1, f.Sitze);
         }
+
+        [TestMethod]
+        public void Fahrrad_KannErstelltWerdenMehrereSitze()
+        {
+            // Arrange
+            int sitze = 2;
+
+            // Act
+            Fahrrad f = new Fahrrad("schwarz", 3, 20, sitze);
+
+            // Assert
+            Assert.AreEqual(sitze, f.Sitze);
+        }
+
+        
     }
 }

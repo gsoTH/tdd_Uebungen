@@ -21,6 +21,11 @@ namespace Uebungen
             this.sitze = 1;
         }
 
+        public Fahrrad(string farbe, int gaenge, int reifengroesseInZoll, int sitze) : this(farbe, gaenge, reifengroesseInZoll)
+        {
+            this.sitze = sitze;
+        }
+
         public string Farbe
         {
             get { return farbe; }
