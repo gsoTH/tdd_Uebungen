@@ -4,18 +4,26 @@
 ## Vorgehen
 Zu jeder Aufgabenstellung finden Sie Lösungsvorschläge in der Form von Klassendiagrammen, UnitTests und Implementierungen. Zu jeder Aufgabe gehören mindestens 3 weitere Dateien mit Lösungvorschlägen. Beispiel:
 
-Die Aufgabe heißt z.B: `1_Fahrrad.md` dann gehören alle Dateien dazu, die mit 1 beginnen. In unserem Fall:
+Die Aufgabe :newspaper: heißt z.B: `1_Fahrrad.md` dann gehören alle Dateien dazu, die mit 1 beginnen. In unserem Fall:
 
-a. `/UML/` (Klassendiagram)
+a. `/UML/` (Klassendiagram) :art:
 - 1_Fahrrad.png 
 
-b. `/UebungenTests/` (UnitTests)
+b. `/UebungenTests/` (UnitTests) :traffic_light:
 - 1_FahrradTests.cs
 - 1_ReifenTests.cs
 
-c. `/Uebungen/` (Implementierung)
+c. `/Uebungen/` (Implementierung) :bookmark_tabs:
 - 1_Fahrrad.cs
 - 1_Reifen.cs
+
+
+| Übungsziel           | Was nutzen?                             | Womit Ergebnisse vergleichen?   |
+|----------------------|-----------------------------------------|---------------------------------|
+| UML entwickeln       | :newspaper:                        | :art:            |
+| Unit Tests entwerfen | :newspaper: + :art: | :traffic_light: |
+| Implementieren       | :traffic_light:       | :bookmark_tabs:            |
+
 
 Wenn Sie z.B. üben wollen, UnitTests zu entwerfen, dann können die Aufgabenstellung + UML als Ausgangslage nutzen und Ihre Ergebnisse anschließend mit meinem Lösungsvorschlag vergleichen.
 
