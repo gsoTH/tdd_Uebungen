@@ -55,7 +55,7 @@ namespace UebungenTests
         public void Farbe_KannVerändertWerden()
         {
             // Arrange
-            Fahrrad f = new Fahrrad("schwarz", 1, 3, 20);
+            Fahrrad f = new Fahrrad("schwarz", 3, 20);
             string neueFarbe = "hellrosa";
 
             // Act

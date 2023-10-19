@@ -10,14 +10,15 @@ namespace Uebungen
     {
         private string farbe;
         private int gaenge;
-        private int reifengroesseInZoll;
+        private Reifen[] reifen = new Reifen[2];
         private int sitze;
 
         public Fahrrad(string farbe, int gaenge, int reifengroesseInZoll)
         {
             this.farbe = farbe;
             this.gaenge = gaenge;
-            this.reifengroesseInZoll = reifengroesseInZoll;
+            reifen[0] = new Reifen(reifengroesseInZoll);
+            reifen[1] = new Reifen(reifengroesseInZoll);
             this.sitze = 1;
         }
 
@@ -28,16 +29,7 @@ namespace Uebungen
 
         public Fahrrad(string farbe, int gaenge, Reifen[] reifen) : this(farbe, gaenge, 12)
         {
-            int maxReifengroesse = 0;
-            for (int i = 0; i < reifen.Length; i++)
-            {
-                if( reifen[i].Zoll > maxReifengroesse)
-                {
-                    maxReifengroesse = reifen[i].Zoll;
-                }
-            }
-
-            this.reifengroesseInZoll = maxReifengroesse;
+            this.reifen = reifen;
         }
 
         public string Farbe
@@ -53,9 +45,23 @@ namespace Uebungen
         {
             get { return gaenge; }
         }
+
         public int ReifengroesseInZoll
         {
-            get { return reifengroesseInZoll; }
+            get 
+            {
+                int maxReifengroesse = 0;
+
+                for (int i = 0; i < reifen.Length; i++)
+                {
+                    if (reifen[i].Zoll > maxReifengroesse)
+                    {
+                        maxReifengroesse = reifen[i].Zoll;
+                    }
+                }
+
+                return maxReifengroesse;
+            }
         }
         public int Sitze
         {
